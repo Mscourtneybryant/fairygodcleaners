@@ -430,7 +430,8 @@ width: 760px;
 height: auto;      /* keep aspect ratio */
 flex-shrink: 0;
 position: absolute;
-right: 0;          /* was -10px, which caused overflow */
+right: 0;          
+margin-top: 140px;
 }
 
 .cta-text{
@@ -446,8 +447,8 @@ border-radius: 33px 33px 2px 33px;
 background: #FFF;
 box-shadow: 0 12px 40px 0 rgba(255, 255, 255, 0.12);
 position: relative;
-top: 130px;
-left: 20px;
+top: 230px;
+left: 40px;
 }
 
 .lets-go{
@@ -681,6 +682,32 @@ line-height: 160%; /* 25.6px */
 /* ===========================
    RESPONSIVE CSS (Mobile)
    =========================== */
+
+   @media (max-width: 1280px) and (aspect-ratio:16/10){
+    .repeat-cta img{
+width: 760px;
+
+height: auto;      /* keep aspect ratio */
+flex-shrink: 0;
+position: absolute;
+right: 0;          
+margin-top: 340px;
+}
+
+
+.text-bubble{
+height: 30px;
+width: 80px;
+text-align: center;
+padding: 2px;
+border-radius: 33px 33px 2px 33px;
+background: #FFF;
+box-shadow: 0 12px 40px 0 rgba(255, 255, 255, 0.12);
+position: relative;
+top: 430px;
+left: 70px;
+}
+   }
 
     
   
@@ -1569,7 +1596,7 @@ line-height: 160%; /* 25.6px */
 
 
 
-
+  
 
    @media (max-width: 820px) {
   /* Kill horizontal scroll */
@@ -2562,6 +2589,9 @@ line-height: 160%; /* 25.6px */
     height: auto;
     margin: 20px 0 0 0;
     max-width: 100%;
+    position: relative;
+    left: 10px;
+
   }
 
   .hero-headline {
@@ -3478,6 +3508,23 @@ line-height: 160%; /* 25.6px */
 .fa-phone-alt {
   color: #884eec;
 }
+}
+
+@media (max-width: 320px){
+       .founder-mobile-2 {
+    width: 403px;
+    height: 301px;
+    flex-shrink: 0;
+    left: -30px;
+    position: relative;
+    left: -170px;
+    margin-top: -18px;
+    margin-bottom: -39px;
+  }
+
+  .repeat-cta h1{
+    margin-bottom: 80px;
+  }
 }
 
 
