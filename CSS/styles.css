@@ -448,7 +448,7 @@ background: #FFF;
 box-shadow: 0 12px 40px 0 rgba(255, 255, 255, 0.12);
 position: relative;
 top: 230px;
-left: 40px;
+left: 130px;
 }
 
 .lets-go{
@@ -588,9 +588,15 @@ line-height: 132%; /* 26.4px */
 
 
 .footer-contact a {
-  color: #2E2E2E;
+  color: #3A82F6;
     text-decoration: none;
 }
+
+.footer-bottom a {
+  color: #3A82F6;
+    text-decoration: none;
+}
+
 
 
 .footer-bottom {
@@ -1112,7 +1118,7 @@ left: -20px;
   }
 
   .phone {
-    color: #333;
+  
     text-decoration: none !important;
   }
 
