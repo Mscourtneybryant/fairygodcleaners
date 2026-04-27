@@ -32,7 +32,7 @@
 </head>
 <body> 
     <main role="main">
-    <section aria-label="Hero" class="hero">
+    <section id="hero" aria-label="Hero" class="hero">
         <div class="hero-picture">
         <img src="/assets/photos/local-cleaner-hero-picture.png" alt="founder of the fairy-god cleaners"/>
         </div>
@@ -361,6 +361,67 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   targets.forEach(el => observer.observe(el));
+});
+</script>
+
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <p>You’re on the list. We’ll notify you when we launch.</p>
+    <button id="closeModal">Close</button>
+  </div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  const hero = document.getElementById("hero");
+
+  const buttons = document.querySelectorAll(`
+    .about-left-1 button,
+    .about-right-2 button,
+    .about-left-mobile button,
+    .about-right-mobile-1 button,
+    .repeat-cta button
+  `);
+
+  buttons.forEach(btn => {
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
+
+      hero.scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+      });
+    });
+  });
+
+});
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.querySelector(".hero-cta form");
+  const modal = document.getElementById("modal");
+  const closeBtn = document.getElementById("closeModal");
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    modal.classList.add("show");
+    form.reset();
+  });
+
+  // CLOSE BUTTON
+  closeBtn.addEventListener("click", () => {
+    modal.classList.remove("show");
+  });
+
+  // CLICK OUTSIDE TO CLOSE (optional but clean)
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      modal.classList.remove("show");
+    }
+  });
+
 });
 </script>
 </body>

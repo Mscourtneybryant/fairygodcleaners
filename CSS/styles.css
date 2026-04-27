@@ -115,6 +115,7 @@ font-weight: 500;
 line-height: 150%; 
 letter-spacing: -0.4px;
 text-transform: capitalize;
+cursor: pointer;
 }
 
 
@@ -491,8 +492,9 @@ font-family: Poppins;
 font-size: 16px;
 font-style: normal;
 font-weight: 500;
-line-height: 150%; /* 24px */
+line-height: 150%;
 letter-spacing: -0.4px;
+cursor: pointer;
 }
 
 .repeat-cta img{
@@ -548,6 +550,42 @@ line-height: 132%; /* 26.4px */
 
 
 
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 1000;
+}
+
+.modal.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 30px 40px;
+  border-radius: 10px;
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+}
+
+.modal-content button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
 
 
 
@@ -926,6 +964,7 @@ left: -20px;
     align-items: center;
     gap: 10px;
     margin-left: 0 !important;
+    cursor: pointer;
   }
 
   /* Why Us Section */
@@ -1810,6 +1849,7 @@ left: -20px;
     align-items: center;
     gap: 10px;
     margin-left: 0 !important;
+    cursor: pointer;
   }
 
   /* Why Us Section */
@@ -2258,6 +2298,7 @@ left: -20px;
     align-items: center;
     gap: 10px;
     margin-left: 0 !important;
+    cursor: pointer;
   }
 
   /* Why Us Section */
